@@ -1,0 +1,121 @@
+<packets name="TeensyFSWPackets" namespace="TeensyFSW" size="111">
+
+    <import_topology>TeensyFSW/Top/TeensyFSWTopologyAppAi.xml</import_topology>
+
+    <packet name="CDH" id="1" level="1">
+        <channel name="cmdDisp.CommandsDispatched"/>
+        <channel name="rateGroup1.MaxCycleTime"/>
+        <channel name="rateGroup1.CycleTime"/>
+        <channel name="rateGroup1.CycleCount"/>
+        <channel name="rateGroup2.MaxCycleTime"/>
+        <channel name="rateGroup2.CycleTime"/>
+        <channel name="rateGroup2.CycleCount"/>
+        <channel name="rateGroup3.MaxCycleTime"/>
+        <channel name="rateGroup3.CycleTime"/>
+        <channel name="rateGroup3.CycleCount"/>
+        <channel name="rateGroup4.MaxCycleTime"/>
+        <channel name="rateGroup4.CycleTime"/>
+        <channel name="rateGroup4.CycleCount"/>
+        <channel name="rateGroup5.MaxCycleTime"/>
+        <channel name="rateGroup5.CycleTime"/>
+        <channel name="rateGroup5.CycleCount"/>
+    </packet>
+
+    <packet name="SystemRes1" id="2" level="2">
+        <channel name="systemResources.MEMORY_TOTAL"/>
+        <channel name="systemResources.MEMORY_USED"/>
+        <channel name="systemResources.NON_VOLATILE_TOTAL"/>
+        <channel name="systemResources.NON_VOLATILE_FREE"/>
+    </packet>
+
+    <packet name="SystemRes2" id="3" level="2">
+        <channel name="systemResources.FRAMEWORK_VERSION"/>
+        <channel name="systemResources.PROJECT_VERSION"/>
+    </packet>
+
+    <packet name="SystemRes3" id="4" level="2">
+        <channel name="systemResources.CPU"/>
+        <channel name="systemResources.CPU_00"/>
+        <channel name="systemResources.CPU_01"/>
+        <channel name="systemResources.CPU_02"/>
+        <channel name="systemResources.CPU_03"/>
+        <channel name="systemResources.CPU_04"/>
+        <channel name="systemResources.CPU_05"/>
+        <channel name="systemResources.CPU_06"/>
+        <channel name="systemResources.CPU_07"/>
+        <channel name="systemResources.CPU_08"/>
+        <channel name="systemResources.CPU_09"/>
+        <channel name="systemResources.CPU_10"/>
+        <channel name="systemResources.CPU_11"/>
+        <channel name="systemResources.CPU_12"/>
+        <channel name="systemResources.CPU_13"/>
+        <channel name="systemResources.CPU_14"/>
+        <channel name="systemResources.CPU_15"/>
+    </packet>
+
+    <packet name="BlinkerChannels" id="5" level="1">
+        <channel name="blinker.LedTransitions"/>
+        <channel name="blinker.BlinkingState"/>
+    </packet>
+
+    <packet name="RadioChannels" id="6" level="1">
+        <channel name="rfm23.Status"/>
+        <channel name="rfm23.NumPacketsReceived"/>
+        <channel name="rfm23.NumPacketsSent"/>
+        <channel name="rfm23.RSSI"/>
+        <channel name="rfm23.temp"/>
+    </packet>
+
+    <packet name="IMUChannels" id="7" level="1">
+        <channel name="imu.AccelData"/>
+        <channel name="imu.GyroData"/>
+        <channel name="imu.Temperature"/>
+        <channel name="mag.Data"/>
+    </packet>
+
+    <packet name="CurrentSensorChannels" id="8" level="1">
+        <channel name="current_solar_panel_1.CurrentSensorData"/>
+        <channel name="current_solar_panel_2.CurrentSensorData"/>
+        <channel name="current_solar_panel_3.CurrentSensorData"/>
+        <channel name="current_solar_panel_4.CurrentSensorData"/>
+        <channel name="current_battery_board.CurrentSensorData"/>
+    </packet>
+
+    <packet name="TemperatureSensorChannels" id="9" level="1">
+        <channel name="temperature_obc.TemperatureSensorData"/>
+        <channel name="temperature_pdu.TemperatureSensorData"/>
+        <channel name="temperature_solar_panel_1.TemperatureSensorData"/>
+        <channel name="temperature_solar_panel_2.TemperatureSensorData"/>
+        <channel name="temperature_solar_panel_3.TemperatureSensorData"/>
+        <channel name="temperature_solar_panel_4.TemperatureSensorData"/>
+        <channel name="temperature_battery_board.TemperatureSensorData"/>
+    </packet>
+
+    <!-- <packet name="GPSChannels" id="10" level="1">
+        <channel name="gps.GPSTlm"/>
+    </packet> -->
+
+    <!-- <packet name="PDUChannels" id="11" level="1">
+        <channel name="pdu.SwitchStatus"/>
+    </packet> -->
+
+    <packet name="HeaterChannels" id="12" level="1">
+        <channel name="heater.HeaterStatus"/>
+    </packet>
+
+    <!-- Ignored packets -->
+
+    <ignore>
+        <channel name="cmdDisp.CommandErrors"/>
+        <channel name="commQueue.comQueueDepth"/>
+        <channel name="commQueue.buffQueueDepth"/>
+        <channel name="fileDownlink.FilesSent"/>
+        <channel name="fileDownlink.PacketsSent"/>
+        <channel name="fileDownlink.Warnings"/>
+        <channel name="pdu.SwitchStatus"/>
+        <channel name="pdu.TRQStatus"/>
+        <channel name="pdu.TRQStatus"/>
+        <channel name="gps.GPSTlm"/>
+        <channel name="ModeManager.CurrentOpMode"/>
+    </ignore>
+</packets>
